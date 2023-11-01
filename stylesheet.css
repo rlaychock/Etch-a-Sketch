@@ -1,0 +1,55 @@
+head {
+    box-sizing: border-box;
+
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    display: flex;
+    height: 100%;
+    background-color: rgb(192, 185, 174);
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}   
+
+.device {
+    display: flex;
+    background-color: rgba(250, 54, 54, 0.863);
+    height: 700px;
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    flex-direction: column;
+}
+
+.device h1 {
+    
+    color: rgb(189, 39, 13);
+    -webkit-text-stroke: black;
+    -webkit-text-stroke-width: 0.5px ;
+    font-size: 36pt;
+}
+
+
+#screen {
+    display: flex;
+    height: 500px;
+    width: 800px;
+    background-color: aliceblue;
+    margin-bottom: auto;
+    border-radius: 10px;
+}
+
+.grid-item {
+    width: calc(25% - 1px);
+    height: calc(25% - 1px);
+    background-color: white;
+    border: 1px solid black ;
+}
