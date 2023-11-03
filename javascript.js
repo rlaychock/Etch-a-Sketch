@@ -1,5 +1,5 @@
 let grid = document.querySelector('.grid');
-let color ="black";
+let color ='black';
 
 const popup = document.getElementById('popup');
 popup.addEventListener('click', function(){
@@ -7,7 +7,15 @@ popup.addEventListener('click', function(){
     createGrid(newSize);
 });
 
+const rainbow = document.getElementById('rainbow');
+rainbow.addEventListener('click', function(){
+    color = getRandomColor();
+});
 
+const black = document. getElementById('black');
+black.addEventListener('click', function() {
+    color = 'black';
+});
 
 function createGrid(size) {
 
@@ -23,9 +31,11 @@ function createGrid(size) {
         const div = document.createElement('div');
         div.classList.add('gridItem');
         
+        
         div.addEventListener('mouseover', () => {
             div.style.backgroundColor = `${color}`;
         });
+
         grid.insertAdjacentElement('beforeend', div);
     }
 }
@@ -43,6 +53,24 @@ function getSize() {
     return input;
    }
 }   
+
+function erase() {
+    let gridSquare = document.getElementsByClassName("gridItem");
+    
+    for(let i = 0; i < gridSquare.length; i++) {
+        gridSquare[i].style.backgroundColor = "white";
+    }
+}
+
+function getRandomColor() {
+    red = Math.floor(Math.random() * 256);
+    green = Math.floor(Math.random() * 256);
+    blue = Math.floor(Math.random() * 256);
+    
+    const color = `rgb(${red}, ${green}, ${blue})`;
+
+    return color;
+}
 
 
 
