@@ -1,9 +1,20 @@
+@font-face {
+    font-family:  CustomFont1;
+    src: url(Fonts/GentyDemo-Regular.ttf);
+}
+
+@font-face {
+    font-family: CustomFont2;
+    src: url(Fonts/GROBOLD.ttf);
+}
+
 body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(45deg, #ff5733, #6f1e51, #325b6d, #31a12c);
 }
 
 .header {
@@ -12,7 +23,10 @@ body {
     align-items: center;
     width: 400px;
     justify-content: space-around;
-    margin-top: 15px;
+    margin-top: 0px;
+    padding-top: 0;
+    font-family: CustomFont2;
+    font-size: 20px;
 }
 
 .footer {
@@ -20,7 +34,7 @@ body {
     flex-direction: row;
     width: 600px;
     justify-content: space-between;
-    height: 50px;
+    margin-top: 5px;
     align-items: center;
 }
 
@@ -29,6 +43,7 @@ body {
     height: 600px;
     border: 1px solid black;
     display: grid;
+    margin-top: 50px;
 }
 
 .gridItem {
@@ -38,6 +53,59 @@ body {
 
      
 h1 {
-    font-size: 48px;
+    font-size: 56px;
     color: rgb(243, 70, 57);
+    font-family: CustomFont1;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.container {
+    background-color: rgb(247, 123, 95);
+    width: 850px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+
+}
+
+
+.footer button,
+#popup {
+    font-family: CustomFont2;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+button#black {
+    background-color: black;
+    color: white;
+}
+
+button#erase {
+    background-color: rgb(245, 198, 145);
+    color: black;
+}
+
+button#random {
+    color: black;
+    background-image: conic-gradient(
+        rgb(238, 88, 88),
+        rgb(245, 141, 57),
+        rgb(247, 216, 79),
+        rgb(145, 255, 82),
+        rgb(86, 245, 152),
+        rgb(145, 255, 82),
+        rgb(247, 216, 79),
+        rgb(245, 141, 57),
+        rgb(238, 88, 88)
+    );
+}
+
+#popup {
+    color: black;
+    background-color: rgb(247, 123, 95);
 }

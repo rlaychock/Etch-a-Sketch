@@ -8,7 +8,7 @@ popup.addEventListener('click', function(){
 });
 
 const rainbow = document.getElementById('rainbow');
-rainbow.addEventListener('click', function(){
+random.addEventListener('click', function(){
     color = getRandomColor();
 });
 
